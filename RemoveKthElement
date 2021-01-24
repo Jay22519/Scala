@@ -1,0 +1,12 @@
+/****Remove the K'th element from a list.***/
+
+object MyClass {
+    def add(x:Int, y:Int) = x + y;
+
+    def main(args: Array[String]) {
+        val internalIdList: List[Int] = List(1,2,3,4,5,6,7,8,9,10) ; 
+        //Removing 7th element from list 
+        print(internalIdList.patch(6, Nil, 1))
+        
+    }
+}
