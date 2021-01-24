@@ -1,0 +1,19 @@
+/****Find the nth digit of a given number ( For 
+example -> 1st digit is 8 , 2nd is 3 for 83529)***/
+
+object MyClass {
+    def run(num: Int, digits: Int): Int =
+    if(num > 0) run(num / 10, digits + 1)
+    else        digits
+    
+    
+    def nthdigit(num:Int , x:Int , n:Int, counter : Int) :Int = 
+    if(counter != n-x) nthdigit(num/10,x,n,counter+1)
+    else num%10
+
+    def main(args: Array[String]) {
+        val x = 123456 ; 
+        print(nthdigit(x,3,run(x,0),0)) ; 
+        
+    }
+}
